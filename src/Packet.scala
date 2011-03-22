@@ -1,5 +1,4 @@
 /**
-import java.io.OutputStream
  * This packet datastructure documents the possible commands you can send to the arduino. 
  * 
  * Every command is 4 bytes:
@@ -43,5 +42,42 @@ class Packet(bulb: Int, r: Int, g: Int, b: Int, a: Int) {
 		os.write(if(a0 < 204) a else 204);
 	}
 	
-	def downscale(c:Int) :Int = ((c/255.0)*16.0).asInstanceOf[Int] 
+	def downscale(c:Int) :Int = ((c/255.0)*16.0).asInstanceOf[Int]
+	
+	override def toString : String = bulb.toString
 }
+
+object Packet {
+	// Factory methods
+	def apply(bulb: Int, r: Int, g: Int, b: Int, a: Int):Packet = new Packet(bulb, r, g, b, a)
+	def apply(bulb: Int, r: Int, g: Int, b: Int):Packet = Packet(bulb, r, g, b, 255)
+	def apply(bulb: Int, c:Color):Packet = Packet(bulb, c.r, c.g, c.b)
+	
+
+	/**
+	 * For (x,y), the origin is (0,0), and x increments right, y increments down
+	 * 
+	 *    x ->
+	 * 	y (0,0)(1,0)
+	 *  | (0,1).......    (10,9)
+	 *  v		  	(9,10)(10,10)
+	 */
+	val layout = Array (
+					Array(	9	,	59	,	10	,	60	,	29	,	79	,	30	,	80	,	49	,	99	),
+					Array(	8	,	58	,	11	,	61	,	28	,	78	,	31	,	81	,	48	,	98	),
+					Array(	7	,	57	,	12	,	62	,	27	,	77	,	32	,	82	,	47	,	97	),
+					Array(	6	,	56	,	13	,	63	,	26	,	76	,	33	,	83	,	46	,	96	),
+					Array(	5	,	55	,	14	,	64	,	25	,	75	,	34	,	84	,	45	,	95	),
+					Array(	4	,	54	,	15	,	65	,	24	,	74	,	35	,	85	,	44	,	94	),
+					Array(	3	,	53	,	16	,	66	,	23	,	73	,	36	,	86	,	43	,	93	),
+					Array(	2	,	52	,	17	,	67	,	22	,	72	,	37	,	87	,	42	,	92	),
+					Array(	1	,	51	,	18	,	68	,	21	,	71	,	38	,	88	,	41	,	91	),
+					Array(	0	,	50	,	19	,	69	,	20	,	70	,	39	,	89	,	40	,	90	)
+						)
+	
+	def translate(x:Int,y:Int) = {
+		layout(y % 10)(x % 10)
+	}
+}
+
+object DrawPacket extends Packet(254,0,0,0,0) {}
