@@ -8,12 +8,16 @@ class FontCharacter(val character : Char, lines : Array[String]) {
 	
 	def toPacket(c: Color, fromx: Int, fromy: Int) : Array[Packet] = {
 		val on = mutable.ArrayBuffer[Packet]()
-		//System.out.println("Writing packet " + toString())
-		
 		for(y <- 0 to 6) {
 			for(x <- 0 to 4) {
+				//System.out.println("Boundscheck " + x + ","+y)
 				if(y < lines.length && x < lines(y).length && lines(y)(x) != ' ') {
-					on += Packet(Packet.translate(x+fromx,y+fromy),c);
+					val bulb = Packet.translate(x+fromx,y+fromy);
+					if(bulb != -1) {
+						val p = Packet(bulb,c);
+						//System.out.println("Creating packet " + p.toString() + " from " + toString())
+						on += p;
+					}
 				}
 			}
 		}

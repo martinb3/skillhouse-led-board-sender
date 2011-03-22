@@ -1,5 +1,9 @@
 /home/martin/src/eclipse-workspace/SerialXmas/bin:/home/martin/bin/eclipse-3.5.2/configuration/org.eclipse.osgi/bundles/318/1/.cp/lib/scala-library.jar:/home/martin/bin/eclipse-3.5.2/configuration/org.eclipse.osgi/bundles/318/1/.cp/lib/scala-dbc.jar:/home/martin/bin/eclipse-3.5.2/configuration/org.eclipse.osgi/bundles/318/1/.cp/lib/scala-swing.jar:/usr/lib/jvm/java-6-sun-1.6.0.24/jre/lib/resources.jar:/usr/lib/jvm/java-6-sun-1.6.0.24/jre/lib/rt.jar:/usr/lib/jvm/java-6-sun-1.6.0.24/jre/lib/jsse.jar:/usr/lib/jvm/java-6-sun-1.6.0.24/jre/lib/jce.jar:/usr/lib/jvm/java-6-sun-1.6.0.24/jre/lib/charsets.jar:/usr/lib/jvm/java-6-sun-1.6.0.24/jre/lib/ext/dnsns.jar:/usr/lib/jvm/java-6-sun-1.6.0.24/jre/lib/ext/localedata.jar:/usr/lib/jvm/java-6-sun-1.6.0.24/jre/lib/ext/sunjce_provider.jar:/usr/lib/jvm/java-6-sun-1.6.0.24/jre/lib/ext/sunpkcs11.jar:/usr/share/java/RXTXcomm.jar:/usr/share/java/jna.jar:/usr/share/java/jna-posix.jar
 -------
+/home/martin/src/eclipse-workspace/SerialXmas/src/Color.scala -> /home/martin/src/eclipse-workspace/SerialXmas/src/Color.scala
+/home/martin/src/eclipse-workspace/SerialXmas/src/Font.scala -> /home/martin/src/eclipse-workspace/SerialXmas/src/Color.scala
+/home/martin/src/eclipse-workspace/SerialXmas/src/Font.scala -> /home/martin/src/eclipse-workspace/SerialXmas/src/Packet.scala
+/home/martin/src/eclipse-workspace/SerialXmas/src/Font.scala -> /home/martin/src/eclipse-workspace/SerialXmas/src/Font.scala
 /home/martin/src/eclipse-workspace/SerialXmas/src/Packet.scala -> /home/martin/src/eclipse-workspace/SerialXmas/src/Color.scala
 /home/martin/src/eclipse-workspace/SerialXmas/src/Packet.scala -> /home/martin/src/eclipse-workspace/SerialXmas/src/Packet.scala
 /home/martin/src/eclipse-workspace/SerialXmas/src/Font.scala -> /home/martin/src/eclipse-workspace/SerialXmas/src/Font.scala
@@ -9,13 +13,16 @@
 /home/martin/src/eclipse-workspace/SerialXmas/src/Driver.scala -> /home/martin/src/eclipse-workspace/SerialXmas/src/Color.scala
 /home/martin/src/eclipse-workspace/SerialXmas/src/Driver.scala -> /home/martin/src/eclipse-workspace/SerialXmas/src/Packet.scala
 /home/martin/src/eclipse-workspace/SerialXmas/src/Driver.scala -> /home/martin/src/eclipse-workspace/SerialXmas/src/Driver.scala
-/home/martin/src/eclipse-workspace/SerialXmas/src/Color.scala -> /home/martin/src/eclipse-workspace/SerialXmas/src/Color.scala
 -------
-/home/martin/src/eclipse-workspace/SerialXmas/src/Font.scala -> /home/martin/src/eclipse-workspace/SerialXmas/bin/FontCharacter$$anonfun$toPacket$1.class
-/home/martin/src/eclipse-workspace/SerialXmas/src/Font.scala -> /home/martin/src/eclipse-workspace/SerialXmas/bin/Font$.class
+/home/martin/src/eclipse-workspace/SerialXmas/src/Packet.scala -> /home/martin/src/eclipse-workspace/SerialXmas/bin/Packet.class
+/home/martin/src/eclipse-workspace/SerialXmas/src/Packet.scala -> /home/martin/src/eclipse-workspace/SerialXmas/bin/Packet$.class
+/home/martin/src/eclipse-workspace/SerialXmas/src/Packet.scala -> /home/martin/src/eclipse-workspace/SerialXmas/bin/DrawPacket$.class
+/home/martin/src/eclipse-workspace/SerialXmas/src/Packet.scala -> /home/martin/src/eclipse-workspace/SerialXmas/bin/DrawPacket.class
 /home/martin/src/eclipse-workspace/SerialXmas/src/Font.scala -> /home/martin/src/eclipse-workspace/SerialXmas/bin/FontCharacter.class
 /home/martin/src/eclipse-workspace/SerialXmas/src/Font.scala -> /home/martin/src/eclipse-workspace/SerialXmas/bin/FontCharacter$$anonfun$toPacket$1$$anonfun$apply$mcVI$sp$1.class
 /home/martin/src/eclipse-workspace/SerialXmas/src/Font.scala -> /home/martin/src/eclipse-workspace/SerialXmas/bin/Font$$anonfun$readFonts$1.class
+/home/martin/src/eclipse-workspace/SerialXmas/src/Font.scala -> /home/martin/src/eclipse-workspace/SerialXmas/bin/FontCharacter$$anonfun$toPacket$1.class
+/home/martin/src/eclipse-workspace/SerialXmas/src/Font.scala -> /home/martin/src/eclipse-workspace/SerialXmas/bin/Font$.class
 /home/martin/src/eclipse-workspace/SerialXmas/src/Font.scala -> /home/martin/src/eclipse-workspace/SerialXmas/bin/Font.class
 /home/martin/src/eclipse-workspace/SerialXmas/src/Driver.scala -> /home/martin/src/eclipse-workspace/SerialXmas/bin/Driver$.class
 /home/martin/src/eclipse-workspace/SerialXmas/src/Driver.scala -> /home/martin/src/eclipse-workspace/SerialXmas/bin/TwoWaySerialComm.class
@@ -23,19 +30,17 @@
 /home/martin/src/eclipse-workspace/SerialXmas/src/Driver.scala -> /home/martin/src/eclipse-workspace/SerialXmas/bin/SerialWriter.class
 /home/martin/src/eclipse-workspace/SerialXmas/src/Driver.scala -> /home/martin/src/eclipse-workspace/SerialXmas/bin/Int$.class
 /home/martin/src/eclipse-workspace/SerialXmas/src/Driver.scala -> /home/martin/src/eclipse-workspace/SerialXmas/bin/Driver$$anonfun$showFonts$1.class
+/home/martin/src/eclipse-workspace/SerialXmas/src/Driver.scala -> /home/martin/src/eclipse-workspace/SerialXmas/bin/Driver$$anonfun$showFonts$2$$anonfun$1.class
 /home/martin/src/eclipse-workspace/SerialXmas/src/Driver.scala -> /home/martin/src/eclipse-workspace/SerialXmas/bin/Driver.class
 /home/martin/src/eclipse-workspace/SerialXmas/src/Driver.scala -> /home/martin/src/eclipse-workspace/SerialXmas/bin/Int.class
+/home/martin/src/eclipse-workspace/SerialXmas/src/Driver.scala -> /home/martin/src/eclipse-workspace/SerialXmas/bin/Driver$$anonfun$showFonts$1$$anonfun$apply$mcVI$sp$1.class
 /home/martin/src/eclipse-workspace/SerialXmas/src/Driver.scala -> /home/martin/src/eclipse-workspace/SerialXmas/bin/Driver$$anonfun$valueOf$1.class
 /home/martin/src/eclipse-workspace/SerialXmas/src/Driver.scala -> /home/martin/src/eclipse-workspace/SerialXmas/bin/Driver$$anonfun$rainbow$1.class
+/home/martin/src/eclipse-workspace/SerialXmas/src/Driver.scala -> /home/martin/src/eclipse-workspace/SerialXmas/bin/Driver$$anonfun$showFonts$1$$anonfun$apply$mcVI$sp$1$$anonfun$apply$mcZI$sp$2.class
 /home/martin/src/eclipse-workspace/SerialXmas/src/Driver.scala -> /home/martin/src/eclipse-workspace/SerialXmas/bin/Driver$$anonfun$showFonts$2.class
-/home/martin/src/eclipse-workspace/SerialXmas/src/Driver.scala -> /home/martin/src/eclipse-workspace/SerialXmas/bin/Driver$$anonfun$showFonts$1$$anonfun$apply$1.class
-/home/martin/src/eclipse-workspace/SerialXmas/src/Driver.scala -> /home/martin/src/eclipse-workspace/SerialXmas/bin/Driver$$anonfun$showFonts$1$$anonfun$1.class
-/home/martin/src/eclipse-workspace/SerialXmas/src/Driver.scala -> /home/martin/src/eclipse-workspace/SerialXmas/bin/Driver$$anonfun$showFonts$2$$anonfun$apply$2.class
+/home/martin/src/eclipse-workspace/SerialXmas/src/Driver.scala -> /home/martin/src/eclipse-workspace/SerialXmas/bin/Driver$$anonfun$showFonts$2$$anonfun$apply$1.class
 /home/martin/src/eclipse-workspace/SerialXmas/src/Driver.scala -> /home/martin/src/eclipse-workspace/SerialXmas/bin/SerialReader.class
+/home/martin/src/eclipse-workspace/SerialXmas/src/Driver.scala -> /home/martin/src/eclipse-workspace/SerialXmas/bin/Driver$$anonfun$showFonts$1$$anonfun$apply$mcVI$sp$1$$anonfun$apply$mcZI$sp$1.class
 /home/martin/src/eclipse-workspace/SerialXmas/src/Color.scala -> /home/martin/src/eclipse-workspace/SerialXmas/bin/Color$$anonfun$rainbowSequence$1.class
 /home/martin/src/eclipse-workspace/SerialXmas/src/Color.scala -> /home/martin/src/eclipse-workspace/SerialXmas/bin/Color.class
 /home/martin/src/eclipse-workspace/SerialXmas/src/Color.scala -> /home/martin/src/eclipse-workspace/SerialXmas/bin/Color$.class
-/home/martin/src/eclipse-workspace/SerialXmas/src/Packet.scala -> /home/martin/src/eclipse-workspace/SerialXmas/bin/Packet.class
-/home/martin/src/eclipse-workspace/SerialXmas/src/Packet.scala -> /home/martin/src/eclipse-workspace/SerialXmas/bin/Packet$.class
-/home/martin/src/eclipse-workspace/SerialXmas/src/Packet.scala -> /home/martin/src/eclipse-workspace/SerialXmas/bin/DrawPacket$.class
-/home/martin/src/eclipse-workspace/SerialXmas/src/Packet.scala -> /home/martin/src/eclipse-workspace/SerialXmas/bin/DrawPacket.class

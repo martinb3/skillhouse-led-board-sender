@@ -75,8 +75,16 @@ object Packet {
 					Array(	0	,	50	,	19	,	69	,	20	,	70	,	39	,	89	,	40	,	90	)
 						)
 	
-	def translate(x:Int,y:Int) = {
-		layout(y % 10)(x % 10)
+	def translate(x:Int,y:Int) : Int = {
+		
+		if(y < 0 || y >= layout.length)
+			return -1;
+		
+		val xrow = layout(y);
+		if(x < 0 || x >= xrow.length)
+			return -1;
+		
+		layout(y)(x)
 	}
 }
 

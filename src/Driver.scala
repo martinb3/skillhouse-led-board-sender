@@ -63,9 +63,10 @@ class SerialWriter(val out: OutputStream, val bq: BlockingQueue[Packet]) extends
 	override def run(): Unit = {
 			while(true) {
 				val p = bq.take();
+				Thread.sleep(35);
 				p.write(out);
 				//System.out.println("Wrote a packet " + p)
-				Thread.sleep(25);
+				
 			}
 	}
 }
@@ -107,12 +108,11 @@ object Driver {
 
 		//readloop(bq);
 		//rainbow(bq);
-		while (true) {
+		do {
 			showFonts(bq, "Testing123!?");
 			Thread.sleep(3*1000);
-		}
+		} while (false);
 	}
-	
 	
 	def showFonts(bq:BlockingQueue[Packet]) : Unit = showFonts(bq, Font.fontmap)
 	
@@ -135,18 +135,37 @@ object Driver {
 	
 	def showFonts(bq:BlockingQueue[Packet], fontLetters:Array[FontCharacter]) = {
 		var colors = Color.rainbowSequence
-		for( fontLetter <- fontLetters) {
-			val thisColor = colors(0); colors = colors.drop(1)
-
-			bq.offer(Packet(100, black)) // clear x 1
-			bq.offer(Packet(101, black)) // clear x 2
+		
+		for(i <- 0 to fontLetters.length-1) {
+			val fontLetter = fontLetters(i)
+			val fontLetter_next = if(i+1 < fontLetters.length) Some(fontLetters(i+1)) else None
 			
-			val packs = fontLetter.toPacket(thisColor, 2, 1)
-			for(pack <- packs) {
-				bq.offer(pack)
+			//System.out.println("FontLetter="+fontLetter+",FontLetter_next="+fontLetter_next)
+			
+			// plus one so it scrolls off the screen
+			for(j <- 10 to -5 by -1) {
+				//System.out.println(j)
+				bq.offer(Packet(100, black)) // clear x 1
+				bq.offer(Packet(101, black)) // clear x 2
+
+				
+				val thisColor = colors(0); colors = colors.drop(1)
+				val packs = fontLetter.toPacket(thisColor, j, 1)
+				for(pack <- packs) {
+					//System.out.println("Offer " + pack)
+					bq.offer(pack)
+				}
+				
+				if(false && j < 5 && !fontLetter_next.isEmpty) {
+					val thisColor2 = colors(0); colors = colors.drop(1)
+					val packs2 = fontLetter_next.get.toPacket(thisColor2, j+5, 1)
+					for(pack2 <- packs2) {
+						bq.offer(pack2)
+					}
+				}
+				
+				bq.offer(DrawPacket)
 			}
-			bq.offer(DrawPacket)
-			Thread.sleep(1*1000)
 		}
 	}
 	
@@ -156,7 +175,6 @@ object Driver {
 			val thisColor = colors(0); colors = colors.drop(1)
 			bq.offer(Packet(i, thisColor))
 		}
-		Thread.sleep(50);
 		bq.offer(DrawPacket); // command "draw" packet
 	}
 	
